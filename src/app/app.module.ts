@@ -1,12 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TechologiesComponent } from './pages/techologies/techologies.component';
 import { UsersComponent } from './pages/users/users.component';
 import { RepoComponent } from './pages/repo/repo.component';
+
+import { RepositoryService } from './services/repository.service';
+import { RepoHeaderComponent } from './pages/repo/repo-header/repo-header.component';
+import { LanguagesComponent } from './pages/techologies/languages/languages.component';
+import { ProjectCardComponent } from './pages/repo/project-card/project-card.component';
 
 const routes = RouterModule.forRoot([
   { path: '', redirectTo: '/technologies', pathMatch: 'full' },
@@ -19,7 +26,7 @@ const routes = RouterModule.forRoot([
     component: UsersComponent
   },
   {
-    path: 'repo',
+    path: 'repo/:key',
     component: RepoComponent
   }
 ]);
@@ -30,13 +37,20 @@ const routes = RouterModule.forRoot([
     HeaderComponent,
     TechologiesComponent,
     UsersComponent,
-    RepoComponent
+    RepoComponent,
+    RepoHeaderComponent,
+    LanguagesComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
-    routes
+    routes,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    RepositoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

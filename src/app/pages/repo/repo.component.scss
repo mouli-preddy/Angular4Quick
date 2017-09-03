@@ -1,0 +1,21 @@
+.repo-body{
+  margin: 10px;
+  background-color: white;
+  .project-head{
+    border-bottom: 1px solid #7f7f7f;
+    margin: 0px 10px;
+    padding: 10px 0px;
+    div{
+      padding: 0px;
+    }
+    .sorting-select{
+      height: 30px;
+      width: 128px;
+    }
+  }
+  .count{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+}

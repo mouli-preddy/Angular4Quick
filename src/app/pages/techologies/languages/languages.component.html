@@ -1,0 +1,9 @@
+<div class="box-outer">
+  <div class="box">
+    <p class="header">Languages</p>
+    <div class="row lang-list" *ngFor="let tech of techLangs">
+      <div class="col col-md-8 lang-name">{{tech.text}}</div>
+      <div class="col col-md-4 text-right">{{tech.count}}</div>
+    </div>
+  </div>
+</div>

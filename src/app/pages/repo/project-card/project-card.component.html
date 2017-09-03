@@ -1,0 +1,15 @@
+<div class="project-card">
+  <div class="row proj-details">
+    <div class="col col-lg-8">
+      <a class="proj-name" (click)="checkUser(card)">{{card.full_name}}</a>
+    </div>
+    <div class="col col-lg-2 text-right">
+      <p class="details" *ngIf="card.language"><i class="fa fa-circle lang-dot"></i>{{card.language}}</p>
+    </div>
+    <div class="col col-lg-2 text-right">
+      <p class="details"><i class="fa fa-star star-icon"></i>{{card.forks_count}}</p>
+    </div>
+  </div>
+  <p class="proj-desc" *ngIf="card.description">{{card.description}}</p>
+  <p class="proj-date" *ngIf="card.updated_at">Updated at {{card.updated_at}}</p>
+</div>

@@ -1,0 +1,19 @@
+.box-outer{
+  background-color: white;
+  padding: 5px 10px;    
+}
+.box{
+  padding: 5px 15px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  .lang-list{
+    margin: 10px 0px 5px 10px;
+  }
+  .lang-name{
+    color: #8d8d8d;
+  }
+}
+.header{
+  font-size: 24px;
+  font-weight: bold;
+}

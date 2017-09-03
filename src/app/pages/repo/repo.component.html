@@ -1,3 +1,23 @@
-<p>
-  repo works!
-</p>
+<app-repo-header [searchKey]="key"></app-repo-header>
+<div class="row repo-body" *ngIf="data">
+  <div class="col col-lg-8">
+    <div class="row project-head">
+      <div class="col col-lg-6">
+        <p class="count">{{data.total_count}} repository results</p>
+      </div>
+      <div class="col col-lg-6 text-right">
+        <select class="sorting-select">
+          <option value="56">sdfsdfsdf</option>
+          <option value="563">sdfsdfsdf</option>
+          <option value="564">sdfsdfsdf</option>
+        </select>
+      </div>
+    </div>
+    <div *ngFor="let item of data.items">
+      <app-project-card [card]="item"></app-project-card>
+    </div>
+  </div>
+  <div class="col col-lg-4">
+    <app-languages></app-languages>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row repo-header">
+  <div class="repo-head-input">
+    <input class="form-control search-box" type="text" [(ngModel)]="searchKey" (keypress)="searchType($event)" />
+  </div>
+  <div class="nav-container" *ngFor="let tab of tabs">
+    <div class="row nav-elem">
+      <p class="nav-text">{{tab.text}}</p>
+      <p class="nav-count">{{tab.count}}</p>
+    </div>
+  </div>
+</div>

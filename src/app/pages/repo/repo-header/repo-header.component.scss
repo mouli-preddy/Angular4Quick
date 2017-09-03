@@ -1,0 +1,38 @@
+.repo-header{
+  width: 100%;
+  margin: 0px 5px;
+  .repo-head-input{
+    background-color: black;
+    padding: 5px 10px;
+    margin-right: 25px;
+    .search-box{
+      color: white;
+      background-color: #555555;
+      font-size: 15px;
+      max-height: 30px;
+      margin: auto 0px;
+      min-width: 256px;
+    }
+  }
+  .nav-container{
+    background-color: white;
+    height: 80%;
+    padding: 8px 25px;
+    .nav-elem{
+      margin: 0px;
+      .nav-text{
+        color: #333333;
+        margin: 0px 5px;
+      }
+      .nav-count{
+        color: #222222;
+        background-color: #e3e3e3;
+        border-radius: 10px;
+        margin: 4px 5px;
+        padding: 0px 5px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+}

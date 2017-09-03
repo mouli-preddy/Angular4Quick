@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-techologies',
@@ -12,32 +13,16 @@ export class TechologiesComponent implements OnInit {
     { text: 'Python', logo: 'assets/images/python.png', count: 2556 },
     { text: 'PHP', logo: 'assets/images/php.png', count: 2556 }
   ];
-  techLangs = [
-    { text: 'Javascript', count: 2556 },
-    { text: 'Java', count: 2556 },
-    { text: 'Python', count: 2556 },
-    { text: 'PHP', count: 2556 },
-    { text: 'Javascript', count: 2556 },
-    { text: 'Java', count: 2556 },
-    { text: 'Python', count: 2556 },
-    { text: 'PHP', count: 2556 },
-    { text: 'Javascript', count: 2556 },
-    { text: 'Java', count: 2556 },
-    { text: 'Python', count: 2556 },
-    { text: 'PHP', count: 2556 },
-    { text: 'Javascript', count: 2556 },
-    { text: 'Java', count: 2556 },
-    { text: 'Python', count: 2556 },
-    { text: 'PHP', count: 2556 }
-  ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
   techLangSelected(tech) {
-    console.log('lang selected is ', tech);
+    this.router.navigate(['/repo/' + tech.text]);
   }
 
 }
