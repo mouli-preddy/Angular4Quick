@@ -1,0 +1,21 @@
+<div class="row FullWidth">
+  <div class="col col-lg-8 tech-large">
+    <div class="box row" *ngFor="let tech of techs" (click)="techLangSelected(tech)">
+      <div class="img-box">
+        <img [src]="tech.logo" />
+      </div>
+      <p class="tech-name">{{tech.text}}</p>
+    </div>
+  </div>
+  <div class="col col-lg-4 tech-langs">
+    <div class="box-outer">
+      <div class="box">
+        <p class="header">Languages</p>
+        <div class="row lang-list" *ngFor="let tech of techLangs">
+          <div class="col col-md-8 lang-name">{{tech.text}}</div>
+          <div class="col col-md-4 text-right">{{tech.count}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
